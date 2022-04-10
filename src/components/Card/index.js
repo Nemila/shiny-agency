@@ -1,17 +1,16 @@
 import PropTypes from "prop-types";
 import defPicture from "../../assets/profilePicture.jpg";
 import styled from "styled-components";
-import { theme } from "../../utils/style/theme";
 
 const StyledCard = styled.div`
-  width: 100%;
+  width: 250px;
   height: 250px;
 
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 
-  background-color: ${theme.colors.backgroundLight};
+  background-color: ${({ theme }) => theme.colors.backgroundLight};
   border-radius: 1rem;
 
   cursor: pointer;
@@ -24,7 +23,7 @@ const StyledCard = styled.div`
 
 const CardLabel = styled.h5`
   text-align: left;
-  color: ${theme.colors.primary};
+  color: ${({ theme }) => theme.colors.primary};
   font-weight: bold;
 `;
 

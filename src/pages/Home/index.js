@@ -17,14 +17,14 @@ const HomeWrapper = styled.div`
   padding: 1rem;
   border-radius: 10px;
 
-  background-color: rgba(249, 249, 252, 1);
+  background-color: ${({ theme }) => theme.colors.backgroundLight};
 
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: ${({ theme }) => theme.mobile}) {
     padding: 2rem;
     gap: 4rem;
   }
@@ -36,7 +36,7 @@ const Content = styled.div`
   align-items: flex-start;
   gap: 1.5rem;
   max-width: 600px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: ${({ theme }) => theme.mobile}) {
     align-items: center;
     text-align: center;
   }
@@ -50,7 +50,7 @@ const Button = styled(Link)`
   color: white;
   padding: 8px 16px;
   border-radius: 2rem;
-  background-color: rgba(88, 67, 228, 1);
+  background-color: ${({ theme }) => theme.colors.primary};
   display: inline-block;
 `;
 const Illustration = styled.img`

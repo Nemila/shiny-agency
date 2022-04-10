@@ -46,14 +46,18 @@ const NavItem = styled.li`
 `;
 const StyledLink = styled(Link)`
   text-decoration: none;
-  color: rgba(129, 134, 160, 1);
+  color: ${({ theme }) => theme.colors.secondary};
+  transition: 200ms ease all;
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
+  }
 `;
 const Button = styled(Link)`
   text-decoration: none;
   color: white;
   padding: 8px 16px;
   border-radius: 2rem;
-  background-color: rgba(88, 67, 228, 1);
+  background-color: ${({ theme }) => theme.colors.primary};
   display: inline-block;
 `;
 
